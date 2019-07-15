@@ -1,0 +1,384 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html, body{
+	height: 100%;
+}
+a{
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+a:hover, button:hover{
+	cursor: pointer;
+}
+body{
+	font-family: 'Poppins', Arial, sans-serif;
+}
+
+
+
+.landing{
+	width: 100%;
+	height: 40vh;
+	position: relative;
+	overflow: hidden;
+}
+.landing .layer{
+	position: absolute;
+	top: 0:
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.landing .shape{
+	background: #4CBCCA;
+	border-radius: 0 0 25% 0;
+	animation: rubber 0.35s linear;
+	transform-origin: top left;
+}
+@keyframes rubber{
+	0%{
+		transform: scale(0);
+	}
+	100%{
+		transform: scale(1);
+	}
+}
+.landing .content{
+	color: #fff;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 0 15%;
+}
+.landing .content h1{
+	font-size: 2em;
+	margin-bottom: 2rem;
+}
+.landing .content p{
+	font-size: 1.1em;
+}
+
+.promises{
+	margin: 30px 0;
+	display: flex;
+}
+.promises .promise{
+	text-align: center;
+}
+.promises .promise p{
+	font-size: 1.2em;
+	color: #262626;
+	padding: 10px;
+}
+.promises .promise p i{
+	width: 100px;
+	height: 100px;
+	line-height: 100px;
+	text-align: center;
+	font-size: 35px;
+	border-radius: 50%;
+	background: #4CBCCA;
+	color: #fff;
+	margin-bottom: 20px;
+	transition: opacity 0.6s, transform 0.6s;
+	transform: scale(0);
+	opacity: 0;
+}
+.promises.active .promise p i{
+	transform: scale(1);
+	opacity: 1;
+}
+
+.dp{
+	background: #4CBCCA;
+	text-align: center;
+	color: #fff;
+}
+.dp .info{
+	display: flex;
+	margin-bottom: 10px;
+}
+.dp .info img{
+	width: 140px;
+	height: 150px;
+	object-fit: cover;
+	border-radius: 0 0 0 10%;
+}
+.dp .info .text{
+	flex-grow: 1;
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.dp .info .text h2{
+	font-size: 1.6em;
+	margin-bottom: 20px;
+}
+.dp .info .text p{
+	font-size: 0.9em;
+}
+.dp .skills-area h1{
+	font-size: 1.8em;
+	padding-bottom: 10px;
+}
+.dp .skills-area .skills{
+	padding: 50px 10px 10px 10px;
+	height: 400px;
+	display: flex;
+	justify-content: space-around;
+}
+.dp .skills-area .skills .skill{
+	margin: 10px 0;
+	width: 10%;
+	flex-basis: 10%;
+	background: #207A84;
+	position: relative;
+	margin: auto 0 0 0;
+	transition: transform 0.6s;
+	transform-origin: bottom center;
+	transform: scaleY(0);
+}
+.dp .skills-area.active .skills .skill{
+	transform: scaleY(1);
+}
+.dp .skills-area .skills .skill p{
+	position: absolute;
+	top: -50px;
+	font-size: 1.2em;
+	line-height: 50px;
+	transform: rotate(-10deg) translate(10px);
+}
+.dp .skills-area .skills .skill:nth-child(1){
+	height: 98%;
+}
+.dp .skills-area .skills .skill:nth-child(2){
+	height: 85%;
+}
+.dp .skills-area .skills .skill:nth-child(3){
+	height: 90%;
+}
+.dp .skills-area .skills .skill:nth-child(4){
+	height: 75%;
+}
+.dp .skills-area .skills .skill:nth-child(5){
+	height: 93%;
+}
+.dp .skills-area .skills .skill:nth-child(6){
+	height: 85%;
+}
+.dp .skills-area .skills .skill:nth-child(7){
+	height: 96%;
+}
+
+.projects{
+	margin: 20px 0;
+}
+.projects h1{
+	text-align: center;
+	font-size: 1.8em;
+	color: #393939;
+}
+
+.card{
+	margin: 10px 0;
+	border-radius: 3px;
+	overflow: hidden;
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+	transition: box-shadow 0.2s, opacity 0.6s, transform 0.6s;
+	transform: scale(0);
+	opacity: 0;
+}
+.showcase.active .card{
+	transform: scale(1);
+	opacity: 1;
+}
+.card:hover{
+	box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.24), 0 4px 2px -3px rgba(0, 0, 0, 0.22), 0 2px 6px 0 rgba(0, 0, 0, 0.3);
+}
+.card img{
+	width: 100%;
+	height: 200px;
+	object-fit: cover;
+}
+.card p{
+	padding: 10px 15px 15px 15px;
+	font-size: 1.2em;
+	color: #2B2B2B;
+}
+.showcase{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+.showcase .card{
+	flex-basis: calc(33.33% - 20px);
+}
+
+footer{
+	text-align: center;
+	padding-bottom: 20px;
+}
+footer a{
+	width: 50px;
+	height: 50px;
+	font-size: 1.2em;
+	line-height: 50px;
+	color: #fff;
+	display: inline-block;
+	text-align: center;
+	border-radius: 50%;
+	margin: 0 10px;
+	box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.2);
+	transition: transform 0.3s;
+	transform-style: preserve-3d;
+	transform: perspective(1000px);
+	animation: rotateo 3s linear infinite;
+}
+@keyframes rotateo{
+	0%{
+		transform: rotateX(20deg) rotateY(0deg);
+	}
+	25%{
+		transform: rotateX(0deg) rotateY(20deg);
+	}
+	50%{
+		transform: rotateX(-20deg) rotateY(0deg);
+	}
+	75%{
+		transform: rotateX(0deg) rotateY(-20deg);
+	}
+	100%{
+		transform: rotateX(20deg) rotateY(0deg);
+	}
+}
+footer a i{
+	transform: translateZ(10px);
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+footer a:hover{
+	transform: rotate(10deg);
+}
+footer a:nth-child(1){
+	background: #48649F;
+}
+footer a:nth-child(2){
+	background: #005443;
+}
+footer a:nth-child(3){
+	background: #3089F7;
+}
+
+.modal{
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	background: rgba(0, 0, 0, 0.6);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	display: none;
+}
+.modal.active{
+	display: flex;
+}
+.modal img{
+	max-width: 90%;
+	max-height: 90%;
+	object-fit: cover;
+}
+
+
+
+@media(max-width: 780px){
+	.showcase .card{
+		flex-basis: calc(100% - 20px);
+	}
+	.card img{
+		height: auto;
+	}
+}
+@media(max-width: 650px){
+	.landing{
+		height: 100vh;
+	}
+	.landing .shape{
+		border-radius: 0 0 200px 0;
+	}
+	.landing .shape{
+		padding: 0 8%;
+	}
+	.landing .content{
+		display: block;
+		padding-top: 50px;
+	}
+	.landing .content h1{
+		margin-bottom: 2.5rem;
+	}
+	
+	.promises{
+		flex-direction: column;
+	}
+	.promises .promise{
+		margin: 10px;
+	}
+	.promises .promise p i{
+		margin-bottom: 0;
+	}
+	
+	.dp .text{
+		padding: 10px;
+	}
+	.dp .skills-area .skills{
+		flex-direction: column;
+		padding: 10px;
+		height: auto;
+	}
+	.dp .skills-area .skills .skill{
+		width: 100%;
+		height: 50px;
+		margin: 10px 0;
+		transform-origin: center left;
+		transform: scaleX(0);
+	}
+	.dp .skills-area.active .skills .skill{
+		transform: scaleX(1);
+	}
+	.dp .skills-area .skills .skill p{
+		transform: none;
+		position: relative;
+		top: 0;
+	}
+	.dp .skills-area .skills .skill:nth-child(1){
+		width: 98%;
+	}
+	.dp .skills-area .skills .skill:nth-child(2){
+		width: 85%;
+	}
+	.dp .skills-area .skills .skill:nth-child(3){
+		width: 90%;
+	}
+	.dp .skills-area .skills .skill:nth-child(4){
+		width: 75%;
+	}
+	.dp .skills-area .skills .skill:nth-child(5){
+		width: 93%;
+	}
+	.dp .skills-area .skills .skill:nth-child(6){
+		width: 85%;
+	}
+	.dp .skills-area .skills .skill:nth-child(7){
+		width: 96%;
+	}
+}
